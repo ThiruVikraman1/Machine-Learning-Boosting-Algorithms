@@ -17,9 +17,25 @@ The following state-of-the-art boosting models are implemented and tuned in this
 - **Target Variable**: Insurance Charges.
 - **Goal**: To exceed the 87% $R^2$ score baseline established in previous Random Forest assignments.
 
+**🔬 Comparison Strategy**
+For each model, I perform a grid search over key hyperparameters:
+
+Learning Rate (eta): To control the step size of each iteration.
+
+n_estimators: To find the optimal number of boosting rounds.
+
+max_depth: To manage model complexity and prevent overfitting.
+
+**📈 Key Findings**
+XGBoost provided the best balance between training speed and accuracy due to its built-in regularization.
+
+LightGBM demonstrated superior performance in terms of computational memory usage.
+
 ## 🛠️ Installation & Setup
 To run these notebooks, you will need to install the following specific boosting libraries:
 
 ```bash
 pip install xgboost
 pip install lightgbm
+
+Author: Thiru Vikraman
